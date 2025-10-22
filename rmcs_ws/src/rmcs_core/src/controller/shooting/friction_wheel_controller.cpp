@@ -220,3 +220,4 @@ private:
 
 PLUGINLIB_EXPORT_CLASS(
     rmcs_core::controller::shooting::FrictionWheelController, rmcs_executor::Component)
+

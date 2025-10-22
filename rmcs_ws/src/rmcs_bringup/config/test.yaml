@@ -1,0 +1,22 @@
+rmcs_executor:
+  ros__parameters:
+    update_rate: 1000.0
+    components:
+      - rmcs_core::controller::test::SignalInput -> b_signal_input
+      - rmcs_core::controller::test::SignalOutput -> a_signal_output
+      - rmcs_core::broadcaster::ValueBroadcaster -> value_broad_caster
+
+a_signal_output:
+  ros__parameters:
+    w: 1.0
+
+b_signal_input: 
+  ros__parameters:
+    w: 1.0
+
+value_broad_caster:
+  ros__parameters:
+    forward_list:
+      - sin
+      - cos
+      - add
